@@ -1,25 +1,23 @@
-# --- QMIX specific parameters ---
-
 # use epsilon greedy action selector
 action_selector: "epsilon_greedy"
 epsilon_start: 1.0
-epsilon_finish: 0.05
+epsilon_finish: 0.001
 epsilon_anneal_time: 50000
 evaluation_epsilon: 0.0
 
-runner: "episode"
+runner: "parallel"
+batch_size_run: 32
 
-buffer_size: 5000
+buffer_size: 7000
 
 # update the target network every {} episodes
-target_update_interval_or_tau: 200
-
-
-obs_agent_id: True
+target_update_interval_or_tau: 32
+  
+obs_agent_id: False
 obs_last_action: False
 obs_individual_obs: False
 use_rnn: False
-
+ 
 # use the Q_Learner to train
 standardise_returns: False
 standardise_rewards: True
@@ -27,6 +25,6 @@ agent_output_type: "q"
 learner: "q_learner"
 double_q: True
 use_rnn: False
-mixer: "vdn"
+mixer: "vdn" 
 
 name: "vdn"

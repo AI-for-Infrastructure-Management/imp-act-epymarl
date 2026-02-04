@@ -10,8 +10,8 @@ env_args:
 learner_log_interval: 100
 log_interval: 1000
 runner_log_interval: 50
-test_interval: 1000
-test_nepisode: 1
+test_interval: 11750
+test_nepisode: 1000
 test_greedy: True
 t_max: 58752000 
 save_model: False
